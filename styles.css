@@ -1,0 +1,123 @@
+/*********************************BODY DEFAULT*********************************/
+body{
+  background-color: #333;
+}
+/******************************************************************************/
+#box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -180px;
+  margin-left: -240px;
+  overflow: hidden;
+}
+#box:hover figure>figcaption{
+  bottom: 0;
+  transition: 0.5s;
+}
+#box:hover figure>figcaption>p{
+  opacity: 1;
+  transition: 0.5s;
+}
+#box:hover figure>figcaption>h2{
+  margin-top: 0;
+  opacity: 1;
+  transition: 0.5s;
+}
+#box:hover figure>figcaption>ul>li{
+  transform: translateY(0);
+  transition: 0.5s;
+}
+#box:hover figure>figcaption>ul>li:nth-child(1){
+  transition-delay: 0.05s;
+}
+#box:hover figure>figcaption>ul>li:nth-child(2){
+  transition-delay: 0.1s;
+}
+#box:hover figure>figcaption>ul>li:nth-child(3){
+  transition-delay: 0.15s;
+}
+/******************************************************************************/
+figure{
+  position: relative;
+  cursor: pointer;
+}
+figure::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 360px;
+  background-color: #3085a3;
+  opacity: 0.13;
+  z-index: 1;
+}
+/******************************************************************************/
+figure>figcaption{
+  position: absolute;
+  z-index: 2;
+  bottom: -70px;
+  width: 480px;
+  height: 70px;
+  background-color: white;
+  transition: 0.5s;
+}
+/******************************************************************************/
+figure>figcaption>h2{
+  line-height: 70px;
+  font-family: arial;
+  font-size: 30px;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #555;
+  padding-left: 18px;
+  display: block;
+  margin-top: 30px;
+  transition: 0.5s;
+  opacity: 0.4;
+}
+figure>figcaption>h2>span{
+  font-weight: 600;
+  padding-left: 5px;
+}
+/******************************************************************************/
+figure>figcaption>p{
+  color: white;
+  font-size: 20px;
+  font-family: arial;
+  font-weight: lighter;
+  position: absolute;
+  top: -170px;
+  left: 55px;
+  text-align: center;
+  display: block;
+  width: 370px;
+  opacity: 0;
+  transition: 0.5s;
+}
+/******************************************************************************/
+figure>figcaption>ul{
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  right: 20px;
+}
+figure>figcaption>ul>li{
+  list-style: none;
+  display: inline-block;
+  transform: translateY(30px);
+  transition: 0.5s;
+}
+figure>figcaption>ul>li:not(:first-child){
+  margin-left: 15px;
+}
+figure>figcaption>ul>li>a{
+  color: #555;
+  display: block;
+  font-size: 20px;
+}
+figure>figcaption>ul>li>a:hover{
+  color: black;
+}
